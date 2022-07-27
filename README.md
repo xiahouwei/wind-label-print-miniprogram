@@ -5,6 +5,8 @@
 #### 0.支持的蓝牙标签打印机
 
 ##### 0.1 Gprinter佳博 热敏条码打印机 型号 GP-3120TU
+![](https://pic.imgdb.cn/item/62e0de39f54cd3f937156096.png)
+![](https://pic.imgdb.cn/item/62e0de49f54cd3f93715b95e.png)
 
 #### 1.安装
 ```
@@ -24,7 +26,7 @@ npm install wind-label-print-miniprogram --save
 #### 2.使用
 
 ```javascript
-// $fxWeight为蓝牙电子秤实例
+// $fxLabelPrint为蓝牙电子秤实例
 import { $fxLabelPrint } from 'wind-label-print-miniprogram'
 ```
 
@@ -201,9 +203,6 @@ const printDataList = [{
 	barcode: '0123456789'
 }]
 
-module.exports = {
-	itemLabelTemplate: ITEM_LABEL_TEMPLATE
-}
 ```
 
 #### 2.12 开启调试
