@@ -5,8 +5,8 @@
 #### 0.支持的蓝牙标签打印机
 
 ##### 0.1 Gprinter佳博 热敏条码打印机 型号 GP-3120TU
-![](https://pic.imgdb.cn/item/62e0de39f54cd3f937156096.png)
-![](https://pic.imgdb.cn/item/62e0de49f54cd3f93715b95e.png)
+![](https://pic.imgdb.cn/item/62e0e237f54cd3f9372de992.png)
+![](https://pic.imgdb.cn/item/62e0e25df54cd3f9372edcbf.png)
 
 #### 1.安装
 ```
