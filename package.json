@@ -6,7 +6,8 @@
   "scripts": {
     "build": "npm run lint && rollup --config",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "lint": "./node_modules/.bin/eslint src/* --fix"
+    "lint": "./node_modules/.bin/eslint src/* --fix",
+    "upload2git": "node ./script/index.mjs"
   },
   "author": "xiahouwei",
   "license": "ISC",
@@ -40,6 +41,8 @@
     "eslint-plugin-jest": "^21.15.0",
     "eslint-plugin-n": "^15.2.4",
     "eslint-plugin-promise": "^6.0.0",
+    "execa": "^6.1.0",
+    "fs-extra": "^10.1.0",
     "pre-commit": "^1.2.2",
     "prettier": "^1.16.1",
     "rollup": "^2.76.0",
