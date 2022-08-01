@@ -53,10 +53,15 @@ const setDeviceCache = function (deviceId, deviceName) {
 const getDeviceCache = function () {
 	const device = wx.getStorageSync('fx-device-label-print')
 	if (device) {
-		const [deviceId, deviceName] = device.split('$$')
-		return {
-			deviceId,
-			deviceName
+		try {
+			const [deviceId, deviceName] = device.split('$$')
+			return {
+				deviceId,
+				deviceName
+			}
+		} catch (error) {
+			console.log(error)
+			return {}
 		}
 	} else {
 		return {}

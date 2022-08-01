@@ -8,6 +8,7 @@ const {
 	debug,
 	setDebugFlag,
 	setDeviceCache,
+	getDeviceCache,
 	noop,
 	isAndroid
 } = require('./utils')
@@ -64,6 +65,26 @@ class LablePrint {
 				})
 			}
 		})
+	}
+
+	// 静默连接
+	silentConnect = () => {
+		return new Promise(resolve => {
+			const { deviceId, deviceName } = getDeviceCache()
+			if (deviceId) {
+				this.connectionLabelPrint(deviceId, deviceName, true).then(() => {
+					resolve({ deviceId, deviceName })
+				})
+			}
+		})
+	}
+
+	// 获取上次连接的设备信息
+	getDefaultDevice = () => {
+		const { deviceId, deviceName } = getDeviceCache()
+		if (deviceId) {
+			return this.createDeviceObj(deviceName, deviceId)
+		}
 	}
 
 	// 扫描打印机

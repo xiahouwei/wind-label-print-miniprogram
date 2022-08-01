@@ -1,6 +1,6 @@
 {
   "name": "wind-label-print-miniprogram",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "一个用于微信小程序的蓝牙打印机核心包",
   "main": "print.min.js",
   "scripts": {
