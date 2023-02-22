@@ -23,7 +23,10 @@ const PRINT_DEFAULT_CONFIG = {
 	barcodeType: '128',
 	barcodeReadable: 1,
 	barcodeNarrow: 3,
-	barcodeWide: 3
+	barcodeWide: 3,
+	qrcodeLevel: 'L',
+	qrcodeMode: 'A',
+	qrcodeWidth: 5
 }
 
 class LablePrint {
@@ -344,6 +347,9 @@ class LablePrint {
 			return this.textPrintHandle(command)
 		} else if (type === 'barcode') {
 			return this.barcodePrintHandle(command)
+		} else if (type === 'qrcode') {
+			console.log('qrcode')
+			return this.qrcodePrintHandler(command)
 		}
 	}
 
@@ -359,6 +365,11 @@ class LablePrint {
 		}
 	}
 
+	qrcodePrintHandler (command) {
+		return (template, str) => {
+			command.setQrcode(template.x, template.y, PRINT_DEFAULT_CONFIG.qrcodeLevel, PRINT_DEFAULT_CONFIG.qrcodeWidth, PRINT_DEFAULT_CONFIG.qrcodeMode, str)
+		}
+	}
 
 	printMulity (dataList, template) {
 		console.log('printMulity')
